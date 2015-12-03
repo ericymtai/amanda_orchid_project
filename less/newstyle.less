@@ -9,7 +9,6 @@ and open the template in the editor.
 */
 @import "variable.less";
 body {
-  /*background: #a17ced;*/
   background: @primaryColor;
 }
 #logo {
@@ -18,16 +17,90 @@ body {
 }
 nav {
      width: 100%;
-  & ul {
+  ul {
     text-align: center;
     margin: 0 auto;
-    & li {
+    li {
+      list-style: none; 
       display: inline-block;
-      background: #992e38;
-      color: #eed14b;
-      margin: 0 2%;
-      padding: .3em 2%;
-      border: .1em solid #e1c674;
-    }
-  }
+      a {
+        background: @secondaryColor;
+        color: @thirdColor;
+        text-decoration: none;
+        margin: 0 2em;
+        padding: .3em 2em;
+        border: .1em solid #e1c674;
+        &:hover {
+          background: @thirdColor;
+          color: @secondaryColor;
+          border: .1em solid @secondaryColor;
+        };  // end nav ul li :hover  
+      };  // end nav ul li a
+    };   // end nav ul li
+  };   // end nav ul
+}   // end nav
+footer:extend(nav ul) {
+  li {
+    list-style:none;
+    display: inline-block;
+    a {
+      font-size: .9em;
+      font-style: italic;
+      margin-bottom: 1em;
+      color:  @secondaryColor;
+      text-decoration: none;
+      &:hover {
+        color: @thirdColor;
+      };  // end footer ul li a:hover
+      &::after {
+          content: " |";
+          margin:  0 1em 0 1.5em;
+          font-style: normal;
+          color: @thirdColor;
+          display: inline-block;
+      };  // end footer ul li::after
+    };  // end footer ul li a
+    &:last-child a::after  {
+       content: "";  
+    };  // end footer ul li:last-child::after 
+  };  // end footer ul li
+} // end footer extend
+.active {
+  background: @thirdColor;
+  color: @secondaryColor;
+  border: .1em solid @secondaryColor;
+}
+.active2 {
+  color: @thirdColor;
+}
+#registerForm {
+  margin: 2em auto;
+  width: 45%;
+  background: @thirdColor;
+  overflow: hidden;
+  color: @secondaryColor;
+}
+h3 {
+  text-align: center;
+}
+.formElements {
+  margin-top: 1.5em;
+}
+label {
+  font-size: .8em;
+  /*display: block;*/
+  /*float: left;*/
+  margin: .5em .5em .5em 4em;
+}
+input {
+  margin: .5em 2em .5em 4.5em;
+/*  float: right;*/
+/*float: left;*/
+  display: block;
+  width: 65%;
+  &::-webkit-input-placeholder {
+    font-size: .8em;
+    color: @primaryColor;
+    padding: .2em 0 0 1em;
+  };
 }

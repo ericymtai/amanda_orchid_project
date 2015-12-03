@@ -17,7 +17,6 @@ and open the template in the editor.
     Author     : ericymtai
 */
 body {
-  /*background: #a17ced;*/
   background: #a17ced;
 }
 #logo {
@@ -27,16 +26,89 @@ body {
 nav {
   width: 100%;
 }
-nav ul {
+nav ul,
+footer {
   text-align: center;
   margin: 0 auto;
 }
 nav ul li {
+  list-style: none;
   display: inline-block;
-  background: #992e38;
+}
+nav ul li a {
+  background: #9d1515;
   color: #eed14b;
-  margin: 0 2%;
-  padding: .3em 2%;
+  text-decoration: none;
+  margin: 0 2em;
+  padding: .3em 2em;
   border: .1em solid #e1c674;
+}
+nav ul li a:hover {
+  background: #eed14b;
+  color: #9d1515;
+  border: 0.1em solid #9d1515;
+}
+footer li {
+  list-style: none;
+  display: inline-block;
+}
+footer li a {
+  font-size: .9em;
+  font-style: italic;
+  margin-bottom: 1em;
+  color: #9d1515;
+  text-decoration: none;
+}
+footer li a:hover {
+  color: #eed14b;
+}
+footer li a::after {
+  content: " |";
+  margin: 0 1em 0 1.5em;
+  font-style: normal;
+  color: #eed14b;
+  display: inline-block;
+}
+footer li:last-child a::after {
+  content: "";
+}
+.active {
+  background: #eed14b;
+  color: #9d1515;
+  border: 0.1em solid #9d1515;
+}
+.active2 {
+  color: #eed14b;
+}
+#registerForm {
+  margin: 2em auto;
+  width: 45%;
+  background: #eed14b;
+  overflow: hidden;
+  color: #9d1515;
+}
+h3 {
+  text-align: center;
+}
+.formElements {
+  margin-top: 1.5em;
+}
+label {
+  font-size: .8em;
+  /*display: block;*/
+  /*float: left;*/
+  margin: .5em .5em .5em 4em;
+}
+input {
+  margin: .5em 2em .5em 4.5em;
+  /*  float: right;*/
+  /*float: left;*/
+  display: block;
+  width: 65%;
+}
+input::-webkit-input-placeholder {
+  font-size: .8em;
+  color: #a17ced;
+  padding: .2em 0 0 1em;
 }
 /*# sourceMappingURL=newstyle.css.map */

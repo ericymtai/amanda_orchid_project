@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>AMANDA'S ORCHID HOME</title>
+    <title>AMANDA'S ORCHID LOGIN</title>
     <link rel="stylesheet" href="css/newstyle.css" >
   </head>
   <body>
@@ -17,8 +17,8 @@ and open the template in the editor.
       </div>
       <nav>
         <ul>
-          <li><a href="index.php" class="active">HOME</a></li>
-          <li><a href="login.php">LOG IN</a></li>
+          <li><a href="index.php">HOME</a></li>
+          <li><a href="login.php"  class="active">LOG IN</a></li>
           <li><a href="logout.php">LOG OUT</a></li>
         </ul>
       </nav>      
@@ -26,20 +26,12 @@ and open the template in the editor.
     
     <main>
       <form  id="registerForm" method="post" action="login.php">
-        <h3>REGISTER</h3>
+       <h3>LOG IN</h3>
         <div class="formElements">
-          <label>First Name: </label>
-          <input type="text" name="firstName" id="fistName"  placeholder="Your First Name: " autofocus required>
-          <label>Last Name: </label>
-          <input type="text" name="lastName" id="lastName"  placeholder="Your Last Name: " required>
-          <label>User Name: </label>
-          <input type="text" name="userName" id="userName"" placeholder="Your User Name: " required>
           <label>Email: </label>
           <input type="email" name="email" id="email"  placeholder="Your Email: " required>
           <label>Password: </label>
           <input type="password" name="password" id="password" required>
-          <label>Confirm Password: </label>
-          <input type="password" name="confirmPassword" id="confirmPassword" required>
             <br>
            
               <br>
@@ -48,13 +40,14 @@ and open the template in the editor.
             <input type="submit">
             <input type="reset">
          </div>   <!-- end .formElements -->
-        
+
       </form>
     </main>
-     <footer>
+
+    <footer>
         <ul>
-          <li><a href="index.php" class="active2">HOME</a></li>
-          <li><a href="login.php">LOG IN</a></li>
+          <li><a href="index.php" >HOME</a></li>
+          <li><a href="login.php" class="active2">LOG IN</a></li>
           <li><a href="logout.php">LOG OUT</a></li>
         </ul>    
     </footer>
