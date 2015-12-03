@@ -27,8 +27,8 @@ nav {
         background: @secondaryColor;
         color: @thirdColor;
         text-decoration: none;
-        margin: 0 2em;
-        padding: .3em 2em;
+        margin: 0 .6em;
+        padding: .3em 1em;
         border: .1em solid #e1c674;
         &:hover {
           background: @thirdColor;
@@ -69,9 +69,11 @@ footer:extend(nav ul) {
   background: @thirdColor;
   color: @secondaryColor;
   border: .1em solid @secondaryColor;
+  cursor: default;
 }
 .active2 {
   color: @thirdColor;
+  cursor: default;
 }
 #registerForm {
   margin: 2em auto;
@@ -88,14 +90,10 @@ h3 {
 }
 label {
   font-size: .8em;
-  /*display: block;*/
-  /*float: left;*/
   margin: .5em .5em .5em 4em;
 }
 input {
   margin: .5em 2em .5em 4.5em;
-/*  float: right;*/
-/*float: left;*/
   display: block;
   width: 65%;
   &::-webkit-input-placeholder {
@@ -103,4 +101,23 @@ input {
     color: @primaryColor;
     padding: .2em 0 0 1em;
   };
+  &[type=submit] {
+    background: @secondaryColor;
+    color: #fff;
+    cursor:pointer;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; 
+    &:hover {
+      background: #fff;
+      color: @secondaryColor;
+    };  // end input[type=submit]:hover
+  };  // end input[type=submit]
+} // end input
+input[type=reset]:extend(input[type=submit]) {
+  background: @primaryColor;
+  &:hover {
+    background: #fff;
+    color: @secondaryColor;
+  };
+  
 }

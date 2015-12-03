@@ -39,8 +39,8 @@ nav ul li a {
   background: #9d1515;
   color: #eed14b;
   text-decoration: none;
-  margin: 0 2em;
-  padding: .3em 2em;
+  margin: 0 .6em;
+  padding: .3em 1em;
   border: .1em solid #e1c674;
 }
 nav ul li a:hover {
@@ -76,9 +76,11 @@ footer li:last-child a::after {
   background: #eed14b;
   color: #9d1515;
   border: 0.1em solid #9d1515;
+  cursor: default;
 }
 .active2 {
   color: #eed14b;
+  cursor: default;
 }
 #registerForm {
   margin: 2em auto;
@@ -95,14 +97,10 @@ h3 {
 }
 label {
   font-size: .8em;
-  /*display: block;*/
-  /*float: left;*/
   margin: .5em .5em .5em 4em;
 }
 input {
   margin: .5em 2em .5em 4.5em;
-  /*  float: right;*/
-  /*float: left;*/
   display: block;
   width: 65%;
 }
@@ -110,5 +108,24 @@ input::-webkit-input-placeholder {
   font-size: .8em;
   color: #a17ced;
   padding: .2em 0 0 1em;
+}
+input[type=submit],
+input[type=reset] {
+  background: #9d1515;
+  color: #fff;
+  cursor: pointer;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+input[type=submit]:hover {
+  background: #fff;
+  color: #9d1515;
+}
+input[type=reset] {
+  background: #a17ced;
+}
+input[type=reset]:hover {
+  background: #fff;
+  color: #9d1515;
 }
 /*# sourceMappingURL=newstyle.css.map */

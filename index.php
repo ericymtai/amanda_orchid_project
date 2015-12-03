@@ -41,9 +41,6 @@ and open the template in the editor.
           <label>Confirm Password: </label>
           <input type="password" name="confirmPassword" id="confirmPassword" required>
             <br>
-           
-              <br>
-            
             <br>
             <input type="submit">
             <input type="reset">
