@@ -13,8 +13,9 @@ and open the template in the editor.
   <body>
     <header>
       <div id="logo">
-        <img src="images/logo_outline.svg" alt="logo"/>
+        <img src="images/logo_outline2.svg" alt="logo"/>
       </div>
+      <h1>Amanda's Orchid Shop</h1>
       <nav>
         <ul>
           <li><a href="index.php">HOME</a></li>

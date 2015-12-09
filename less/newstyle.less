@@ -8,15 +8,38 @@ and open the template in the editor.
     Author     : ericymtai
 */
 @import "variable.less";
+@font-face {
+  font-family: Edwardian_Script;
+  src: url(../fonts/EdwardianScriptITC.ttf);
+		}
 body {
   background: @primaryColor;
 }
-#logo {
-  text-align: center;
+header {
   margin: 0 auto;
+}
+#shop {
+  width: 100%;
+  float: left;
+  margin: 2em 35% 1.5em;;
+}
+#logo {
+  margin: 1.3em auto;
+  float: left;
+}
+#companyName {
+  float: left;
+}
+h1 {
+  margin-left: .2em;
+  font-family: Edwardian_Script, sans-serif;
+  font-size: 2.3em;
+  color:  @secondaryColor;
+  line-height: .25em;
 }
 nav {
      width: 100%;
+     margin: 0 ;
   ul {
     text-align: center;
     margin: 0 auto;
@@ -39,32 +62,7 @@ nav {
     };   // end nav ul li
   };   // end nav ul
 }   // end nav
-footer:extend(nav ul) {
-  li {
-    list-style:none;
-    display: inline-block;
-    a {
-      font-size: .9em;
-      font-style: italic;
-      margin-bottom: 1em;
-      color:  @secondaryColor;
-      text-decoration: none;
-      &:hover {
-        color: @thirdColor;
-      };  // end footer ul li a:hover
-      &::after {
-          content: " |";
-          margin:  0 1em 0 1.5em;
-          font-style: normal;
-          color: @thirdColor;
-          display: inline-block;
-      };  // end footer ul li::after
-    };  // end footer ul li a
-    &:last-child a::after  {
-       content: "";  
-    };  // end footer ul li:last-child::after 
-  };  // end footer ul li
-} // end footer extend
+
 .active {
   background: @thirdColor;
   color: @secondaryColor;
@@ -75,6 +73,10 @@ footer:extend(nav ul) {
   color: @thirdColor;
   cursor: default;
 }
+
+form {
+  margin: 0;
+}
 #registerForm {
   margin: 2em auto;
   width: 45%;
@@ -82,11 +84,11 @@ footer:extend(nav ul) {
   overflow: hidden;
   color: @secondaryColor;
 }
-h3 {
-  text-align: center;
-}
 .formElements {
   margin-top: 1.5em;
+}
+h3 {
+  text-align: center;
 }
 label {
   font-size: .8em;
@@ -121,3 +123,30 @@ input[type=reset]:extend(input[type=submit]) {
   };
   
 }
+
+footer:extend(nav ul) {
+  li {
+    list-style:none;
+    display: inline-block;
+    a {
+      font-size: .9em;
+      font-style: italic;
+      margin-bottom: 1em;
+      color:  @secondaryColor;
+      text-decoration: none;
+      &:hover {
+        color: @thirdColor;
+      };  // end footer ul li a:hover
+      &::after {
+          content: " |";
+          margin:  0 1em 0 1.5em;
+          font-style: normal;
+          color: @thirdColor;
+          display: inline-block;
+      };  // end footer ul li::after
+    };  // end footer ul li a
+    &:last-child a::after  {
+       content: "";  
+    };  // end footer ul li:last-child::after 
+  };  // end footer ul li
+} // end footer extend

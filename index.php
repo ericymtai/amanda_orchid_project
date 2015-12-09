@@ -11,18 +11,27 @@ and open the template in the editor.
     <link rel="stylesheet" href="css/newstyle.css" >
   </head>
   <body>
+    
     <header>
-      <div id="logo">
-        <img src="images/logo_outline.svg" alt="logo"/>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.php" class="active">HOME</a></li>
-          <li><a href="login.php">LOG IN</a></li>
-          <li><a href="logout.php">LOG OUT</a></li>
-        </ul>
-      </nav>      
+      <div id="shop">
+        <div id="logo">
+          <img src="images/logo_outline2.svg" alt="logo"/>
+        </div>  <!-- end #logo -->
+        <div id="companyName">
+          <h1>Amanda's</h1>
+          <h1>Orchid</h1>
+          <h1>Shop</h1>
+        </div>  <!-- end #companyName -->
+      </div>  <!-- end #shop -->
     </header>
+    
+    <nav>
+      <ul>
+        <li><a href="index.php" class="active">HOME</a></li>
+        <li><a href="login.php">LOG IN</a></li>
+        <li><a href="logout.php">LOG OUT</a></li>
+      </ul>
+    </nav>    
     
     <main>
       <form  id="registerForm" method="post" action="login.php">
