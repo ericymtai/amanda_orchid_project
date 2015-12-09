@@ -1,26 +1,101 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 2-Dec-2015, 9:35:30 PM
-    Author     : ericymtai
-*/
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 3-Dec-2015, 9:32:34 AM
-    Author     : ericymtai
-*/
+/* css reset */
+@import url(https://fonts.googleapis.com/css?family=Amiri);
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: 'Amiri', serif;
+}
 @font-face {
   font-family: Edwardian_Script;
   src: url(../fonts/EdwardianScriptITC.ttf);
 }
 body {
+  width: 100%;
   background: #a17ced;
 }
 header {
@@ -29,10 +104,11 @@ header {
 #shop {
   width: 100%;
   float: left;
-  margin: 2em 35% 1.5em;
+  /*margin: 2em 35% 1.5em;*/
+  margin: 2em auto 1.5em;
 }
 #logo {
-  margin: 1.3em auto;
+  margin: 1.1em auto;
   float: left;
 }
 #companyName {
@@ -42,8 +118,8 @@ h1 {
   margin-left: .2em;
   font-family: Edwardian_Script, sans-serif;
   font-size: 2.3em;
-  color: #9d1515;
-  line-height: .25em;
+  color: #5a0c0c;
+  line-height: .9em;
 }
 nav {
   width: 100%;
@@ -63,7 +139,7 @@ nav ul li a {
   color: #eed14b;
   text-decoration: none;
   margin: 0 .6em;
-  padding: .3em 1em;
+  padding: .1em 1em;
   border: .1em solid #e1c674;
 }
 nav ul li a:hover {
@@ -83,6 +159,7 @@ nav ul li a:hover {
 }
 form {
   margin: 0;
+  font-family: 'Amiri', serif;
 }
 #registerForm {
   margin: 2em auto;
@@ -92,24 +169,33 @@ form {
   color: #9d1515;
 }
 .formElements {
-  margin-top: 1.5em;
+  margin-top: 1.2em;
 }
 h3 {
   text-align: center;
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-top: 1em;
 }
 label {
-  font-size: .8em;
-  margin: .5em .5em .5em 4em;
+  font-size: .85em;
+  margin: .5em .15em .5em 3em;
 }
 input {
-  margin: .5em 2em .5em 4.5em;
+  margin: .15em 3em .5em 3.5em;
   display: block;
-  width: 65%;
+  width: 75%;
+  height: 2.8em;
 }
 input::-webkit-input-placeholder {
   font-size: .8em;
   color: #a17ced;
-  padding: .2em 0 0 1em;
+  padding: .2em 0 1em 1em;
+}
+input:-moz-placeholder {
+  font-size: 1em;
+  color: #a17ced;
+  padding: .2em 0 1em 1em;
 }
 input[type=submit],
 input[type=reset] {
