@@ -35,7 +35,7 @@ and open the template in the editor.
     
     <main>
       <form  id="registerForm" method="post" action="login.php">
-        <h3>REGISTER</h3>
+        <h3>REGISTRATION</h3>
         <div class="formElements">
           <label>First Name: </label>
           <input type="text" name="firstName" id="fistName"  placeholder="Your First Name: " autofocus required>
@@ -57,15 +57,18 @@ and open the template in the editor.
         
       </form>
     </main>
+    
      <footer>
         <ul>
           <li><a href="index.php" class="active2">HOME</a></li>
           <li><a href="login.php">LOG IN</a></li>
           <li><a href="logout.php">LOG OUT</a></li>
-        </ul>    
+        </ul> 
+       <p>Music: http://www.purple-planet.com</p>
     </footer>
     <?php
     // put your code here
     ?>
+    <script src="js/sound.js" type="text/javascript"></script>
   </body>
 </html>
