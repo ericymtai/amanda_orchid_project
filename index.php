@@ -11,6 +11,7 @@ and open the template in the editor.
     <link rel="stylesheet" href="css/newstyle.css" >
   </head>
   <body>
+
     
     <header>
       <div id="shop">
@@ -34,7 +35,7 @@ and open the template in the editor.
     </nav>    
     
     <main>
-      <form  id="registerForm" method="post" action="login.php">
+      <form  id="registerForm" method="post" action="action.php">
         <h3>REGISTRATION</h3>
         <div class="formElements">
           <label>First Name: </label>
@@ -66,9 +67,7 @@ and open the template in the editor.
         </ul> 
        <p>Music: http://www.purple-planet.com</p>
     </footer>
-    <?php
-    // put your code here
-    ?>
+   
     <script src="js/sound.js" type="text/javascript"></script>
   </body>
 </html>

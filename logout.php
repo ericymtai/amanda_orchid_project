@@ -12,6 +12,7 @@ and open the template in the editor.
   </head>
   <body>
     
+    
     <header>
       <div id="shop">
         <div id="logo">
