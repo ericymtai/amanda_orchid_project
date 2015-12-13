@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Applications/MAMP/htdocs/Amanda_orchid/index.php</file>
+            <file>file:/Applications/MAMP/htdocs/Amanda_orchid/less/variable.less</file>
+            <file>file:/Applications/MAMP/htdocs/Amanda_orchid/less/global_setting.less</file>
+            <file>file:/Applications/MAMP/htdocs/Amanda_orchid/login.php</file>
+            <file>file:/Applications/MAMP/htdocs/Amanda_orchid/logout.php</file>
+            <file>file:/Applications/MAMP/htdocs/Amanda_orchid/css/newstyle.css</file>
+            <file>file:/Applications/MAMP/htdocs/Amanda_orchid/less/newstyle.less</file>
+            <file>file:/Applications/MAMP/htdocs/Amanda_orchid/connectdb.php</file>
+            <file>file:/Applications/MAMP/htdocs/Amanda_orchid/action.php</file>
+        </group>
+    </open-files>
 </project-private>
