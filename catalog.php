@@ -26,7 +26,7 @@ session_start();
     <nav>
       <ul>
         <li><a href="catalog.php" class="active">CATALOG</a></li>
-        <li><a href="logout.php.php">LOG OUT</a></li>
+        <li><a href="logout.php">LOG OUT</a></li>
       </ul>
     </nav>   
     
@@ -52,10 +52,9 @@ session_start();
                 } else {
                     while($row = mysql_fetch_array($result)) {
                         echo '<tr><td><h3>'.$row['item'].
-                                '</h3><td><p>'.$row['description'].'</p></td>'.
                                 '</td><td><p> $'.$row['price'].
                                 '</p></td><td><img src="images/'.$row['image'].' "/></td>'.
-                                '<td><input type="button" class="addToCart" value="Add To Cart"></td></tr>';
+                                '<td><input type="button" class="details" value="Details"></td></tr>';
                     }
                 }
                  mysql_close($link);
@@ -68,9 +67,11 @@ session_start();
           <li><a href="catalog.php" class="active2">CATALOG</a></li>
           <li><a href="logout.php">LOG OUT</a></li>
         </ul> 
-       <!-- <p>Music: http://www.purple-planet.com</p> -->
+        <h6>This site is for educational purpose</h6>
+        <h6>References:</h6>
+        <p>Font: http://fontsov.com/font/edwardianscriptitc54019.html, Music: http://www.purple-planet.com</p> 
     </footer>
    
-   
+    <script src="js/sound.js" type="text/javascript"></script> 
 </body>
 </html>

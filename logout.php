@@ -4,11 +4,6 @@ session_destroy();
 ?>
 
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
   <head>
     <meta charset="UTF-8">
@@ -33,7 +28,8 @@ and open the template in the editor.
     
     <nav>
         <ul>
-          <li><a href="index.php">Sign Up</a></li>
+          <li><a href="index.php">SIGN UP</a></li>
+          <li><a href="login.php">LOG IN</a></li>
           <li><a href="logout.php" class="active">LOG OUT</a></li>
         </ul>
     </nav>  
@@ -55,10 +51,12 @@ and open the template in the editor.
           <li><a href="index.php">SIGN UP</a></li>
           <li><a href="login.php">LOG IN</a></li>
           <li><a href="logout.php" class="active2">LOG OUT</a></li>
-        </ul>    
+        </ul> 
+        <h6>This site is for educational purpose</h6>
+        <h6>References:</h6>
+        <p>Font: http://fontsov.com/font/edwardianscriptitc54019.html, Music: http://www.purple-planet.com</p> 
     </footer>
-    <?php
-    // put your code here
-    ?>
+    
+    <script src="js/sound.js" type="text/javascript"></script> 
   </body>
 </html>

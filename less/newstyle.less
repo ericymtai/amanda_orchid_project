@@ -169,18 +169,23 @@ main {
 table {
   margin: 0 auto 2em;
   background: @thirdColor;
+  width: 50%;
   h3 {
     color: @secondaryColor;
   }
   tr {
-    display: block;
+    display: inline-block;
+    width: 50%;
       border: 1px solid @primaryColor;
       td {
+        width: 100%;
         display: block;
+        /*float: left;*/
         text-align: center;
         img {
           width: 30%;
           height: auto;
+          
       } // end table tr td img
     } // end table tr td
   } // end table tr 

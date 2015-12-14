@@ -251,16 +251,20 @@ main h2 {
 table {
   margin: 0 auto 2em;
   background: #eed14b;
+  width: 50%;
 }
 table h3 {
   color: #9d1515;
 }
 table tr {
-  display: block;
+  display: inline-block;
+  width: 50%;
   border: 1px solid #a17ced;
 }
 table tr td {
+  width: 100%;
   display: block;
+  /*float: left;*/
   text-align: center;
 }
 table tr td img {
