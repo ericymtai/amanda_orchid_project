@@ -1,15 +1,57 @@
 <?php 
-    session_start();
-    error_reporting(E_ALL); //I missed the real line of code that Baya had here, but I think it was like this line and the next's
-    ini_set('display_errors', '0');
+session_start();
+// ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 ?>
-
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+
+
+<?php
+if ( isset( $_POST['email'] ) ) {  // if form successfully submitted  
+
+    function validator($data) { // security function
+        if ( isset($data)){ // confirm there is data
+            $data = trim($data); // strip spaces
+            $data = stripslashes($data); // strip slashes
+            $data = htmlspecialchars($data); // convert any html special chars into standard text
+            $data = filter_var($data, FILTER_SANITIZE_STRING); // filter the string
+            return $data; // return the entered data
+        } else {
+            exit(); // end php
+        } // end else
+    } // end function
+    $username  = validator($_POST['email']); // username
+    $password  = validator($_POST['password']); // password
+    $error; // hold errors for later
+    require_once('connectdb.php'); // allow database access
+    $results = mysql_query( // check if user exists
+            "
+            SELECT * FROM aosuser WHERE email = '$username'
+            "
+    ) or die (mysql_error()); // if failed present an error
+    $userRecords =  mysql_fetch_row($results); // fetch row data for the user
+    if ($username == $userRecords[3] && $password == $userRecords[4]) { // if entered data matches records
+        $_SESSION['loggedIn'] = $username; // allow secure access
+        $_SESSION['name'] = $username; // name session after username
+        header("Location: catalog.php"); // login user
+        mysql_close ($link); // close database for security
+        exit(); // end php
+    } else { // incorrectly entered username and/or passwird
+        $error = "User and/or Password Incorrect"; // error
+    } // end security check else
+} // end on submit
+?>
+
+
+
+
+
+
+
 <html>
   <head>
     <meta charset="UTF-8">
@@ -17,84 +59,7 @@ and open the template in the editor.
     <link rel="stylesheet" href="css/newstyle.css" >
   </head>
   <body>
-    
-    <?php include "connectdb.php" ?>
-		
-		<?php 
-		    if ($_SESSION["user"]=="" || $_SESSION["user"]=="undefined"){
-
-		 ?>
-    <nav>
-		    <ul>
-		        <li>Log In</li>
-		    </ul>
-		</nav>
-
-		<?php 
-		    } else {
-		        ?>
-
-
-		        <nav>
-		            <ul>
-		                <li>Log Out</li>
-		            </ul>
-		        </nav>
-
-		        <?php
-		    }
-
-		 ?>
-
-		<p>Enter your username and password <br>
-		    <?php print $_GET["msg"] ?>
-		</p>
    
-    <?php 
-
-			if (!isset($_POST['loginName'], $_POST['userPassword'])){
-//				$_SESSION['msg'] = "Please enter valid username and password";
-
-			} else {
-
-				// $strlogin = $_POST['fuser']; //previously taught way, but is less secure (or something)
-
-				// if we are here, the data is valid and we can insert it into database
-				$strlogin = filter_var($_POST['loginName'], FILTER_SANITIZE_STRING);
-				$strPwd = filter_var($_POST['userPassword'], FILTER_SANITIZE_STRING);
-
-
-				// Retrieve username and password from database according to user's input
-				$stmt = mysql_query("Select * from aosuser where (userName='".$strlogin ."') and (pwd= '".$strPwd."')");
-
-				// Check username and password match
-				$num_rows = mysql_num_rows($stmt);
-				if ($num_rows != 1) {
-
-					$_SESSION["user"]="";
-					$_SESSION["mes"]="login failed";
-					mysql_close($link);
-
-					//header('Location: index.php?msg="Login failed"');'
-					?>
-					<!--<meta http-equiv="refresh" content="0;URL=index.php?msg='Login failed'" />-->
-					<?php
-
-
-				} else {
-					$_SESSION["user"]="$strlogin";
-					$_SESSION["mes"]="";
-					mysql_close($link);
-
-					?>
-					<!--<meta http-equiv="refresh" content="0;URL=Home.php" />-->
-					<?php
-				}
-
-			}
-
-
-		 ?>
    
     <header>
       <div id="shop">
@@ -111,22 +76,23 @@ and open the template in the editor.
     
       <nav>
         <ul>
-          <li><a href="index.php">HOME</a></li>
+          <li><a href="index.php">Sign Up</a></li>
           <li><a href="login.php"  class="active">LOG IN</a></li>
-          <li><a href="logout.php">LOG OUT</a></li>
         </ul>
       </nav>      
     
     <main>
-      <form  id="registerForm" method="post" action="store.php">
+      <form  id="registerForm" method="post" action="login.php">
        <h3>LOG IN</h3>
         <div class="formElements">
           <label>Email: </label>
-          <input type="text" name="loginName" id="loginName" value="<?php echo $userName; ?>" placeholder="Your Email: " required>
+          <input type="email" name="email" id="email"  placeholder="Your Email: " required>
           <label>Password: </label>
-          <input type="password" name="userPassword" id="userPassword" value="<?php echo $password; ?>" required>
+          <input type="password" name="password" id="password" required>
             <br>
-            <br>
+           
+              <br>
+            
             <br>
             <input type="submit">
             <input type="reset">
@@ -137,15 +103,14 @@ and open the template in the editor.
 
     <footer>
         <ul>
-          <li><a href="index.php" >HOME</a></li>
+          <li><a href="index.php" >SIGN UP</a></li>
           <li><a href="login.php" class="active2">LOG IN</a></li>
-          <li><a href="logout.php">LOG OUT</a></li>
         </ul>  
-      <p>Music: http://www.purple-planet.com</p>
+       <p>Music: http://www.purple-planet.com</p> 
     </footer>
     <?php
     // put your code here
     ?>
-    <script src="js/sound.js" type="text/javascript"></script>
+    <!-- // <script src="js/sound.js" type="text/javascript"></script> -->
   </body>
 </html>

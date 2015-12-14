@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -28,9 +32,8 @@ and open the template in the editor.
     
     <nav>
       <ul>
-        <li><a href="index.php" class="active">HOME</a></li>
+        <li><a href="index.php" class="active">SIGN UP</a></li>
         <li><a href="login.php">LOG IN</a></li>
-        <li><a href="logout.php">LOG OUT</a></li>
       </ul>
     </nav>    
     
@@ -61,13 +64,12 @@ and open the template in the editor.
     
      <footer>
         <ul>
-          <li><a href="index.php" class="active2">HOME</a></li>
+          <li><a href="index.php" class="active2">SIGN UP</a></li>
           <li><a href="login.php">LOG IN</a></li>
-          <li><a href="logout.php">LOG OUT</a></li>
         </ul> 
-       <p>Music: http://www.purple-planet.com</p>
+        <p>Music: http://www.purple-planet.com</p> 
     </footer>
    
-    <script src="js/sound.js" type="text/javascript"></script>
+    <!-- // <script src="js/sound.js" type="text/javascript"></script> -->
   </body>
 </html>

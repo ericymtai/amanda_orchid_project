@@ -244,4 +244,27 @@ footer li a::after {
 footer li:last-child a::after {
   content: "";
 }
+main h2 {
+  text-align: center;
+  font-size: 1.6em;
+}
+table {
+  margin: 0 auto 2em;
+  background: #eed14b;
+}
+table h3 {
+  color: #9d1515;
+}
+table tr {
+  display: block;
+  border: 1px solid #a17ced;
+}
+table tr td {
+  display: block;
+  text-align: center;
+}
+table tr td img {
+  width: 30%;
+  height: auto;
+}
 /*# sourceMappingURL=newstyle.css.map */

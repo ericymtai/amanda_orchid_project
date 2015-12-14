@@ -6,45 +6,71 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>validation</title>
+    <title>AMANDA'S ORCHID CATALOG</title>
+    <link rel="stylesheet" href="css/newstyle.css" >
 </head>
 <body>
+  
+     <div id="shop">
+        <div id="logo">
+          <img src="images/logo_outline2.svg" alt="logo"/>
+        </div>  <!-- end #logo -->
+        <div id="companyName">
+          <h1>Amanda's</h1>
+          <h1>Orchid</h1>
+          <h1>Shop</h1>
+        </div>  <!-- end #companyName -->
+      </div>  <!-- end #shop -->
+    </header>
+    
+    <nav>
+      <ul>
+        <li><a href="catalog.php" class="active">CATALOG</a></li>
+        <li><a href="logout.php.php">LOG OUT</a></li>
+      </ul>
+    </nav>   
+    
+        <!-- // connect and open the db -->
+        <?php 
+            include "connectdb.php" 
+        ?>
 
-          <li><a href="logout.php" class="active">LOG OUT</a></li>
-    
-    <!-- // connect and open the db -->
-    <?php 
-        include "connectdb.php" 
-    ?>
-    
-    <!-- // Retrieve the information    -->
-    <?php
-        
+        <!-- // Retrieve the information    -->
+        <?php
         $result = mysql_query("SELECT * FROM aosproduct") or die("Retrieving info failed: ".mysql_error());
         $num_rows = mysql_num_rows($result);
         ?>
-                                         
+        
+        <main>
         <h2>List of products</h2>
-        <table border="2">
-            <tr>category name</tr>
-            <td>description</td>
-            <td>image</td>
-            </tr>
+        <table>
+    
             
              <?php 
-            if ($num_rows = 0) {
-                echo "No products come back soon!!!";
-            } else {
-                while($row = mysql_fetch_array($result)) {
-                    echo '<tr><td> '.$row['item'].'</td><td>'.$row['price'].'</td><td><img src="images/'.$row['image'].' "/></td><td>'.$row['price'].'</td></tr>';
+                if ($num_rows = 0) {
+                    echo "No products come back soon!!!";
+                } else {
+                    while($row = mysql_fetch_array($result)) {
+                        echo '<tr><td><h3>'.$row['item'].
+                                '</h3><td><p>'.$row['description'].'</p></td>'.
+                                '</td><td><p> $'.$row['price'].
+                                '</p></td><td><img src="images/'.$row['image'].' "/></td>'.
+                                '<td><input type="button" class="addToCart" value="Add To Cart"></td></tr>';
+                    }
                 }
-            }
-    
-             mysql_close($link);
-    ?>
+                 mysql_close($link);
+            ?>
+            
         </table>
-                                         
-
-    
+        </main>
+        <footer>
+        <ul>
+          <li><a href="catalog.php" class="active2">CATALOG</a></li>
+          <li><a href="logout.php">LOG OUT</a></li>
+        </ul> 
+       <!-- <p>Music: http://www.purple-planet.com</p> -->
+    </footer>
+   
+   
 </body>
 </html>

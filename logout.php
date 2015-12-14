@@ -1,3 +1,8 @@
+<?php 
+session_start();
+session_destroy();
+?>
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -28,8 +33,7 @@ and open the template in the editor.
     
     <nav>
         <ul>
-          <li><a href="index.php">HOME</a></li>
-          <li><a href="login.php">LOG IN</a></li>
+          <li><a href="index.php">Sign Up</a></li>
           <li><a href="logout.php" class="active">LOG OUT</a></li>
         </ul>
     </nav>  
@@ -48,7 +52,7 @@ and open the template in the editor.
 
     <footer>
         <ul>
-          <li><a href="index.php">HOME</a></li>
+          <li><a href="index.php">SIGN UP</a></li>
           <li><a href="login.php">LOG IN</a></li>
           <li><a href="logout.php" class="active2">LOG OUT</a></li>
         </ul>    
