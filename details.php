@@ -42,7 +42,7 @@ session_start();
         ?>
         
         <main>
-        <h2>List of products</h2>
+        <h2>Products' Details</h2>
         <table>
     
             
@@ -51,9 +51,15 @@ session_start();
                     echo "No products come back soon!!!";
                 } else {
                     while($row = mysql_fetch_array($result)) {
-                        echo '<tr>
-                                <td><img src="images/'.$row['image'].' "/></td>'.
-                                '<td><a href="details.php?id='.$row['product_id'].'"><input type="button" class="details" value="Details"></a></td></tr>';
+                        echo '<tr><td><h3>'.$row['item'].
+                                '</td><td><p> Description: '.$row['description'].
+                                '</td><td><p> Our price $'.$row['price'].
+                                '</td><td><p>Size: '.$row['size'].
+                                '</td><td><p> Blooming: '.$row['blooming'].
+                                '</td><td><p> Watering: '.$row['watering'].
+                                '</td><td><p> Temperature: '.$row['temperature'].
+                                '</p></td><td><img src="images/'.$row['image'].' "/></td>'.
+                                '<td><input type="button" class="details" value="Details"></td></tr>';
                     }
                 }
                  mysql_close($link);

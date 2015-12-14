@@ -251,24 +251,30 @@ main h2 {
 table {
   margin: 0 auto 2em;
   background: #eed14b;
-  width: 50%;
+  width: 90%;
 }
 table h3 {
   color: #9d1515;
 }
 table tr {
   display: inline-block;
-  width: 50%;
-  border: 1px solid #a17ced;
+  width: 43%;
+  margin: 1em;
+  background: #ff9;
+  border: 5px solid #a17ced;
 }
 table tr td {
   width: 100%;
   display: block;
-  /*float: left;*/
-  text-align: center;
+  padding: .2em 2em;
+  text-align: left;
 }
 table tr td img {
-  width: 30%;
+  width: 100%;
   height: auto;
+}
+table tr td input[type=button] {
+  margin: 0;
+  width: 100%;
 }
 /*# sourceMappingURL=newstyle.css.map */

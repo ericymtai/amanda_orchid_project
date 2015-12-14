@@ -169,24 +169,29 @@ main {
 table {
   margin: 0 auto 2em;
   background: @thirdColor;
-  width: 50%;
+  width: 90%;
   h3 {
     color: @secondaryColor;
   }
   tr {
     display: inline-block;
-    width: 50%;
-      border: 1px solid @primaryColor;
+    width: 43%;
+    margin: 1em;
+    background: #ff9;
+      border: 5px solid @primaryColor;
       td {
         width: 100%;
         display: block;
-        /*float: left;*/
-        text-align: center;
+        padding:  .2em 2em;
+        text-align: left;
         img {
-          width: 30%;
-          height: auto;
-          
-      } // end table tr td img
+          width: 100%;
+          height: auto;   
+        } // end table tr td img
+        input[type=button] {
+          margin: 0;
+          width: 100%;
+        } // end table tr td input[type="button"]
     } // end table tr td
   } // end table tr 
 } // end table
