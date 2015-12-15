@@ -7,6 +7,7 @@ session_destroy();
 <html>
   <head>
     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMANDA'S ORCHID LOGOUT</title>
     <link rel="stylesheet" href="css/newstyle.css" >
   </head>
@@ -54,7 +55,7 @@ session_destroy();
         </ul> 
         <h6>This site is for educational purpose</h6>
         <h6>References:</h6>
-        <p>Font: http://fontsov.com/font/edwardianscriptitc54019.html, Music: http://www.purple-planet.com</p> 
+        <pre>Font: http://fontsov.com/font/edwardianscriptitc54019.html         Music: http://www.purple-planet.com</pre>
     </footer>
     
     <script src="js/sound.js" type="text/javascript"></script> 

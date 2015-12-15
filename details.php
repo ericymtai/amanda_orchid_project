@@ -6,6 +6,7 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMANDA'S ORCHID CATALOG</title>
     <link rel="stylesheet" href="css/newstyle.css" >
 </head>
@@ -37,13 +38,13 @@ session_start();
 
         <!-- // Retrieve the information    -->
         <?php
-        $result = mysql_query("SELECT * FROM aosproduct") or die("Retrieving info failed: ".mysql_error());
+        $result = mysql_query("SELECT * FROM aosproduct WHERE product_id = ".$_GET['id']) or die("Retrieving info failed: ".mysql_error());
         $num_rows = mysql_num_rows($result);
         ?>
         
         <main>
         <h2>Products' Details</h2>
-        <table>
+        <table class='detailsTable'>
     
             
              <?php 
@@ -53,13 +54,13 @@ session_start();
                     while($row = mysql_fetch_array($result)) {
                         echo '<tr><td><h3>'.$row['item'].
                                 '</td><td><p> Description: '.$row['description'].
-                                '</td><td><p> Our price $'.$row['price'].
-                                '</td><td><p>Size: '.$row['size'].
-                                '</td><td><p> Blooming: '.$row['blooming'].
-                                '</td><td><p> Watering: '.$row['watering'].
-                                '</td><td><p> Temperature: '.$row['temperature'].
+                                '</p></td><td><p> Our price $'.$row['price'].
+                                '</p></td><td><p>Size: '.$row['size'].
+                                'in. pot</p></td><td><p> Blooming: '.$row['blooming'].
+                                '</p></td><td><p> Watering: '.$row['watering'].
+                                '</p></td><td><p> Temperature: '.$row['temperature'].
                                 '</p></td><td><img src="images/'.$row['image'].' "/></td>'.
-                                '<td><input type="button" class="details" value="Details"></td></tr>';
+                                '<td><input type="button" class="buy" value="BUY"></td></tr>';
                     }
                 }
                  mysql_close($link);
@@ -74,7 +75,7 @@ session_start();
         </ul> 
         <h6>This site is for educational purpose</h6>
         <h6>References:</h6>
-        <p>Font: http://fontsov.com/font/edwardianscriptitc54019.html, Music: http://www.purple-planet.com</p> 
+        <pre>Font: http://fontsov.com/font/edwardianscriptitc54019.html         Music: http://www.purple-planet.com</pre>
     </footer>
    
     <script src="js/sound.js" type="text/javascript"></script> 

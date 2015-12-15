@@ -215,10 +215,17 @@ input[type=reset]:hover {
   background: #fff;
   color: #9d1515;
 }
-footer p {
+footer {
+  margin-bottom: 2em;
+}
+footer h6 {
+  line-height: 1.1em;
+  font-size: 1em;
+}
+footer pre {
+  display: inline;
   font-size: .7em;
-  color: #444;
-  margin: 1em 0;
+  color: #111;
 }
 footer li {
   list-style: none;
@@ -248,10 +255,20 @@ main h2 {
   text-align: center;
   font-size: 1.6em;
 }
+@media screen and (max-width: 800px) {
+  main {
+    background: red;
+  }
+}
 table {
   margin: 0 auto 2em;
   background: #eed14b;
-  width: 90%;
+  width: 70%;
+}
+@media screen and (max-width: 800px) {
+  table {
+    width: 90%;
+  }
 }
 table h3 {
   color: #9d1515;
@@ -260,7 +277,7 @@ table tr {
   display: inline-block;
   width: 43%;
   margin: 1em;
-  background: #ff9;
+  background-color: #f2dd7a;
   border: 5px solid #a17ced;
 }
 table tr td {
@@ -272,9 +289,20 @@ table tr td {
 table tr td img {
   width: 100%;
   height: auto;
+  margin-top: 1em;
+}
+table tr td a {
+  text-decoration: none;
 }
 table tr td input[type=button] {
-  margin: 0;
+  margin: .5em 0 1em;
   width: 100%;
+}
+.detailsTable {
+  width: 50%;
+}
+.detailsTable tr {
+  width: 90%;
+  line-height: 1em;
 }
 /*# sourceMappingURL=newstyle.css.map */

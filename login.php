@@ -1,4 +1,7 @@
-<?php 
+<?php ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 session_start();
 // ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 ?>
@@ -26,11 +29,13 @@ if ( isset( $_POST['email'] ) ) {  // if form successfully submitted
             SELECT * FROM aosuser WHERE email = '$username'
             "
     ) or die (mysql_error()); // if failed present an error
-    $userRecords =  mysql_fetch_row($results); // fetch row data for the user
-    if ($username == $userRecords[3] && $password == $userRecords[4]) { // if entered data matches records
+    $userRecords = mysql_fetch_assoc($results); // fetch row data for the user
+    if ($username == $userRecords['email'] && $password == $userRecords['pwd']) { // if entered data matches records
         $_SESSION['loggedIn'] = $username; // allow secure access
         $_SESSION['name'] = $username; // name session after username
+        ob_start();
         header("Location: catalog.php"); // login user
+        
         mysql_close ($link); // close database for security
         exit(); // end php
     } else { // incorrectly entered username and/or passwird
@@ -48,6 +53,7 @@ if ( isset( $_POST['email'] ) ) {  // if form successfully submitted
 <html>
   <head>
     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMANDA'S ORCHID LOGIN</title>
     <link rel="stylesheet" href="css/newstyle.css" >
   </head>
