@@ -164,9 +164,6 @@ form {
 #registerForm {
   margin: 2em auto;
   width: 45%;
-  /*  @media screen and (min-width: 1000px) {
-       width: 55%;
-   }*/
   background: #eed14b;
   overflow: hidden;
   color: #9d1515;
@@ -264,11 +261,6 @@ main h2 {
   text-align: center;
   font-size: 1.6em;
 }
-@media screen and (max-width: 800px) {
-  main {
-    background: red;
-  }
-}
 table {
   margin: 0 auto 2em;
   background: #eed14b;
@@ -334,9 +326,6 @@ table tr td input[type=button] {
 }
 .cartTable {
   width: 60%;
-  /*  @media screen and (max-width: 800px) {
-       width: 40%;
-   }*/
 }
 .cartTable tr {
   display: block;

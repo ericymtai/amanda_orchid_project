@@ -50,7 +50,6 @@ nav {
         margin: 0 .6em;
         padding: .1em 1em;
         border: .1em solid #e1c674;
-        
         &:hover {
           background: @thirdColor;
           color: @secondaryColor;
@@ -74,22 +73,17 @@ nav {
 form {
   margin: 0;
   font-family: 'Amiri', serif;
-
 }
 #registerForm {
   margin: 2em auto;
   width: 45%;
-/*  @media screen and (min-width: 1000px) {
-       width: 55%;
-   }*/
   @media screen and (max-width: 800px) {
        width: 75%;
-   }
+   }  // end #registerForm @media
   background: @thirdColor;
   overflow: hidden;
   color: @secondaryColor;
-  
-}
+} // #registerForm
 .formElements {
   margin-top: 1.2em;
 }
@@ -112,11 +106,11 @@ input {
   &::-webkit-input-placeholder {
     font-size: 1.2em;
     color: @primaryColor;
-  };
+  };    // end input::-webkit-input-placeholder
   &:-moz-placeholder {
     font-size: 1.2em;
     color: @primaryColor;
-  };
+  };  // end input:-moz-placeholder
   &[type=submit] {
     background: @secondaryColor;
     margin: 1em auto 2em;
@@ -136,19 +130,19 @@ input[type=reset]:extend(input[type=submit]) {
   &:hover {
     background: #fff;
     color: @secondaryColor;
-  }; 
-}
+  }; // end input[type=reset]:hover
+} // end input[type=reset]
 footer {
   margin-bottom: 2em;
   h6 {
     font-size: 1.3em;
-  }
+  } // end footer h6
   p {
     display: block;
     font-size: 1.2em;
     color: #111;
-  }
-}
+  } // end footer p
+} // end footer 
 
 footer:extend(nav ul) {
   li {
@@ -180,24 +174,20 @@ main {
   h2 {
     text-align: center;
     font-size: 1.6em;
-  }
-  @media screen and (max-width: 800px) {
-       background: red;
-   }
-}
+  }   // end main h2
+} // end main
 table {
   margin: 0 auto 2em;
   background: @thirdColor;
   width: 70%;
-  
   @media screen and (max-width: 800px) {
        width: 90%;
-   }
+   }    // end table @media
   h3 {
     color: @secondaryColor;
     font-size: 1.8em;
     line-height: 1.5em;
-  }
+  } // end table h3
   tr {
     display: inline-block;
     width: 43%;
@@ -206,11 +196,11 @@ table {
     border: 5px solid @primaryColor;
     @media screen and (max-width: 540px) {
              width: 80%;
-        }
+        } // end table tr @media
     &:nth-child(even) {
         float: none;
         margin-right: 1.2em;;
-      }
+      } // end table tr:nth-child(even) 
     td {
       width: 100%;
       display: block;
@@ -218,15 +208,15 @@ table {
       text-align: left;
       p {
         font-size: 1.3em;
-      }
+      } // end table tr td p
       img {
         width: 100%;
         height: auto;  
         margin-top: 1em;
       } // end table tr td img
-      a{
+      a {
         text-decoration: none;
-      }
+      } // end table tr td a
       input[type=button] {
         margin: .5em 0 1em;
         width: 100%;
@@ -247,9 +237,6 @@ table {
 } // end .detailsTable
 .cartTable {
   width: 60%;
-/*  @media screen and (max-width: 800px) {
-       width: 40%;
-   }*/
   tr {
     display: block;
     width: 80%;
@@ -257,7 +244,7 @@ table {
     margin: 0 auto;
     @media screen and (max-width: 800px) {
        max-height:  20em;
-   }
+   }  // end .cartTabletr tr @media
     td { 
       display: inline-block;
       img {
