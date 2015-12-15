@@ -45,8 +45,7 @@ session_start();
         <main>
         <h2>Shopping Cart</h2>
         <table class='cartTable'>
-    
-            
+          <tbody>         
              <?php 
                 if ($num_rows = 0) {
                     echo "No products come back soon!!!";
@@ -59,7 +58,7 @@ session_start();
                 }
                  mysql_close($link);
             ?>
-            
+            </tbody>
         </table>
         </main>
         <footer>

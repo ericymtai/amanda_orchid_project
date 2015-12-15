@@ -45,8 +45,7 @@ session_start();
         <main>
         <h2>List of products</h2>
         <table>
-    
-            
+            <tbody>
              <?php 
                 if ($num_rows = 0) {
                     echo "No products come back soon!!!";
@@ -59,7 +58,7 @@ session_start();
                 }
                  mysql_close($link);
             ?>
-            
+            </tbody>
         </table>
         </main>
         <footer>

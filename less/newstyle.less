@@ -189,18 +189,25 @@ table {
     line-height: 1.5em;
   } // end table h3
   tr {
-    display: inline-block;
-    width: 43%;
-    margin: 1em;
+      display: inline-block;
+      width: 43%;
+      margin: 1em 1em 1em 1.4em;
+      &:nth-child(even) {
+        float: right;
+        margin-right: 1.4em;
+      } // end table tr:nth-child(even)
     .my-mixin-bgLighten(@thirdColor);
     border: 5px solid @primaryColor;
-    @media screen and (max-width: 540px) {
-             width: 80%;
+    @media screen and (max-width: 670px) {
+             display: block;
+             width: 90%;
+             margin: 0 auto;
+             &:nth-child(even) {
+              float: none;
+              margin: 0 auto;
+              padding: 0;
+             } // end table tr:nth-child(even) 
         } // end table tr @media
-    &:nth-child(even) {
-        float: none;
-        margin-right: 1.2em;;
-      } // end table tr:nth-child(even) 
     td {
       width: 100%;
       display: block;
@@ -230,9 +237,17 @@ table {
 } // end table
 .detailsTable {
   width: 50%;
+  @media screen and (max-width: 800px) {
+    width: 80%;
+  }
+  @media screen and (max-width: 670px) {
+      width: 90%;
+      margin: 0 auto;
+    } // end .detailsTable @media
   tr {
     width: 90%;
     line-height: 1em;
+    
   } // end .detailsTable tr
 } // end .detailsTable
 .cartTable {
@@ -242,15 +257,27 @@ table {
     width: 80%;
     line-height: 1em;
     margin: 0 auto;
+    P {
+      line-height: 1.2em;
+    }
     @media screen and (max-width: 800px) {
        max-height:  20em;
-   }  // end .cartTabletr tr @media
+    }  // end .cartTabletr tr @media 800
+    @media screen and (max-width: 670px) {
+      width: 100%;
+      p {
+        line-height: 1.1em;
+      }  // end .cartTabletr tr @media 670 p
+    } // end .cartTabletr tr @media 670
     td { 
       display: inline-block;
       img {
             width: 10%;
             height: auto;  
             margin-top: 1em;
+            @media screen and (max-width: 670px) {
+              width: 18%;
+            }
           } // end .cartTabletr tr td img
     } // end .cartTabletr tr td
   } // end .cartTabletr tr
