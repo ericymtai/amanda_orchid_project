@@ -31,7 +31,6 @@ session_destroy();
         <ul>
           <li><a href="index.php">SIGN UP</a></li>
           <li><a href="login.php">LOG IN</a></li>
-          <li><a href="logout.php" class="active">LOG OUT</a></li>
         </ul>
     </nav>  
     
@@ -51,11 +50,12 @@ session_destroy();
         <ul>
           <li><a href="index.php">SIGN UP</a></li>
           <li><a href="login.php">LOG IN</a></li>
-          <li><a href="logout.php" class="active2">LOG OUT</a></li>
         </ul> 
-        <h6>This site is for educational purpose</h6>
-        <h6>References:</h6>
-        <pre>Font: http://fontsov.com/font/edwardianscriptitc54019.html         Music: http://www.purple-planet.com</pre>
+        <h6>This site is for educational purpose.</h6>
+        <br>
+        <p>References:</p>
+        <p><a href="http://fontsov.com/font/edwardianscriptitc54019.html">Font: http://fontsov.com/font/edwardianscriptitc54019.html</a></p>         
+        <p><a href="http://www.purple-planet.com">Music: http://www.purple-planet.com</a></p>
     </footer>
     
     <script src="js/sound.js" type="text/javascript"></script> 

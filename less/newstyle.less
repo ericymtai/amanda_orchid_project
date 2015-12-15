@@ -16,7 +16,7 @@ header {
 }
 #shop {
   width: 100%;
-  margin: 2em auto 1.5em;
+  margin: 3em auto 2.5em;
   text-align: center;
 }
 #logo {
@@ -29,7 +29,7 @@ header {
 h1 {
   margin-left: .2em;
   font-family: Edwardian_Script, sans-serif;
-  font-size: 2.3em;
+  font-size: 2.5em;
   .my-mixin-dark(); 
   line-height: .9em;
 }
@@ -46,9 +46,11 @@ nav {
         background: @secondaryColor;
         color: @thirdColor;
         text-decoration: none;
+        font-size: 1.3em;
         margin: 0 .6em;
         padding: .1em 1em;
         border: .1em solid #e1c674;
+        
         &:hover {
           background: @thirdColor;
           color: @secondaryColor;
@@ -69,17 +71,24 @@ nav {
   color: @thirdColor;
   cursor: default;
 }
-
 form {
   margin: 0;
   font-family: 'Amiri', serif;
+
 }
 #registerForm {
   margin: 2em auto;
   width: 45%;
+/*  @media screen and (min-width: 1000px) {
+       width: 55%;
+   }*/
+  @media screen and (max-width: 800px) {
+       width: 75%;
+   }
   background: @thirdColor;
   overflow: hidden;
   color: @secondaryColor;
+  
 }
 .formElements {
   margin-top: 1.2em;
@@ -91,26 +100,27 @@ h3 {
   margin-top: 1em;
 }
 label {
-  font-size: .85em;
-  margin: .5em .15em .5em 3em;
+  font-size: 1.1em;
+  margin: .5em .15em .5em 12.5%;
 }
 input {
-  margin: .15em 3em .5em 3.5em;
   display: block;
+  margin: 0 auto;
   width: 75%;
   height: 2.8em;
+  padding-left: 1em;
   &::-webkit-input-placeholder {
-    font-size: .8em;
+    font-size: 1.2em;
     color: @primaryColor;
-    padding: .2em 0 1em 1em;
   };
   &:-moz-placeholder {
-    font-size: 1em;
+    font-size: 1.2em;
     color: @primaryColor;
-    padding: .2em 0 1em 1em;
   };
   &[type=submit] {
     background: @secondaryColor;
+    margin: 1em auto 2em;
+    font-size: 1em;
     color: #fff;
     cursor:pointer;
     -webkit-border-radius: 10px;
@@ -126,29 +136,26 @@ input[type=reset]:extend(input[type=submit]) {
   &:hover {
     background: #fff;
     color: @secondaryColor;
-  };
-  
+  }; 
 }
 footer {
   margin-bottom: 2em;
   h6 {
-    line-height: 1.1em;
-    font-size: 1em;
+    font-size: 1.3em;
   }
-  pre {
-    display: inline;
-    font-size: .7em;
+  p {
+    display: block;
+    font-size: 1.2em;
     color: #111;
   }
 }
-
 
 footer:extend(nav ul) {
   li {
     list-style:none;
     display: inline-block;
     a {
-      font-size: .9em;
+      font-size: 1.4em;
       font-style: italic;
       margin-bottom: 1em;
       color:  @secondaryColor;
@@ -182,35 +189,52 @@ table {
   margin: 0 auto 2em;
   background: @thirdColor;
   width: 70%;
+  
   @media screen and (max-width: 800px) {
        width: 90%;
    }
   h3 {
     color: @secondaryColor;
+    font-size: 1.8em;
+    line-height: 1.5em;
   }
   tr {
     display: inline-block;
     width: 43%;
     margin: 1em;
     .my-mixin-bgLighten(@thirdColor);
-      border: 5px solid @primaryColor;
-      td {
-        width: 100%;
-        display: block;
-        padding:  .2em 2em;
-        text-align: left;
-        img {
-          width: 100%;
-          height: auto;  
-          margin-top: 1em;
-        } // end table tr td img
-        a{
-          text-decoration: none;
+    border: 5px solid @primaryColor;
+    @media screen and (max-width: 540px) {
+             width: 80%;
         }
-        input[type=button] {
-          margin: .5em 0 1em;
-          width: 100%;
-        } // end table tr td input[type="button"]
+    &:nth-child(even) {
+        float: none;
+        margin-right: 1.2em;;
+      }
+    td {
+      width: 100%;
+      display: block;
+      padding:  .2em 2em;
+      text-align: left;
+      p {
+        font-size: 1.3em;
+      }
+      img {
+        width: 100%;
+        height: auto;  
+        margin-top: 1em;
+      } // end table tr td img
+      a{
+        text-decoration: none;
+      }
+      input[type=button] {
+        margin: .5em 0 1em;
+        width: 100%;
+        border-radius: .5em;
+        font-size: 1.1em;
+        .my-mixin-bgDarken(@primaryColor);
+        .my-mixin-dark(#fff);
+      } // end table tr td input[type="button"]
     } // end table tr td
   } // end table tr 
 } // end table
@@ -219,5 +243,28 @@ table {
   tr {
     width: 90%;
     line-height: 1em;
-  }
-}
+  } // end .detailsTable tr
+} // end .detailsTable
+.cartTable {
+  width: 60%;
+/*  @media screen and (max-width: 800px) {
+       width: 40%;
+   }*/
+  tr {
+    display: block;
+    width: 80%;
+    line-height: 1em;
+    margin: 0 auto;
+    @media screen and (max-width: 800px) {
+       max-height:  20em;
+   }
+    td { 
+      display: inline-block;
+      img {
+            width: 10%;
+            height: auto;  
+            margin-top: 1em;
+          } // end .cartTabletr tr td img
+    } // end .cartTabletr tr td
+  } // end .cartTabletr tr
+} //end .cartTable

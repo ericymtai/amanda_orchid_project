@@ -1,7 +1,4 @@
-<?php ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
+<?php 
 session_start();
 // ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 ?>
@@ -30,12 +27,11 @@ if ( isset( $_POST['email'] ) ) {  // if form successfully submitted
             "
     ) or die (mysql_error()); // if failed present an error
     $userRecords = mysql_fetch_assoc($results); // fetch row data for the user
+    //var_dump($userRecords);
     if ($username == $userRecords['email'] && $password == $userRecords['pwd']) { // if entered data matches records
         $_SESSION['loggedIn'] = $username; // allow secure access
         $_SESSION['name'] = $username; // name session after username
-        ob_start();
         header("Location: catalog.php"); // login user
-        
         mysql_close ($link); // close database for security
         exit(); // end php
     } else { // incorrectly entered username and/or passwird
@@ -89,14 +85,10 @@ if ( isset( $_POST['email'] ) ) {  // if form successfully submitted
           <label>Password: </label>
           <input type="password" name="password" id="password" required>
             <br>
-           
-              <br>
-            
             <br>
-            <input type="submit">
-            <input type="reset">
+          <input type="submit">
+          <input type="reset">
          </div>   <!-- end .formElements -->
-
       </form>
     </main>
 
@@ -105,9 +97,11 @@ if ( isset( $_POST['email'] ) ) {  // if form successfully submitted
           <li><a href="index.php" >SIGN UP</a></li>
           <li><a href="login.php" class="active2">LOG IN</a></li>
         </ul>  
-        <h6>This site is for educational purpose</h6>
-        <h6>References:</h6>
-        <p>Font: http://fontsov.com/font/edwardianscriptitc54019.html, Music: http://www.purple-planet.com</p> 
+        <h6>This site is for educational purpose.</h6>
+        <br>
+        <p>References:</p>
+        <p><a href="http://fontsov.com/font/edwardianscriptitc54019.html">Font: http://fontsov.com/font/edwardianscriptitc54019.html</a></p>         
+        <p><a href="http://www.purple-planet.com">Music: http://www.purple-planet.com</a></p>
     </footer>
   
     <script src="js/sound.js" type="text/javascript"></script> 

@@ -103,7 +103,7 @@ header {
 }
 #shop {
   width: 100%;
-  margin: 2em auto 1.5em;
+  margin: 3em auto 2.5em;
   text-align: center;
 }
 #logo {
@@ -116,7 +116,7 @@ header {
 h1 {
   margin-left: .2em;
   font-family: Edwardian_Script, sans-serif;
-  font-size: 2.3em;
+  font-size: 2.5em;
   color: #5a0c0c;
   line-height: .9em;
 }
@@ -137,6 +137,7 @@ nav ul li a {
   background: #9d1515;
   color: #eed14b;
   text-decoration: none;
+  font-size: 1.3em;
   margin: 0 .6em;
   padding: .1em 1em;
   border: .1em solid #e1c674;
@@ -163,9 +164,17 @@ form {
 #registerForm {
   margin: 2em auto;
   width: 45%;
+  /*  @media screen and (min-width: 1000px) {
+       width: 55%;
+   }*/
   background: #eed14b;
   overflow: hidden;
   color: #9d1515;
+}
+@media screen and (max-width: 800px) {
+  #registerForm {
+    width: 75%;
+  }
 }
 .formElements {
   margin-top: 1.2em;
@@ -177,28 +186,29 @@ h3 {
   margin-top: 1em;
 }
 label {
-  font-size: .85em;
-  margin: .5em .15em .5em 3em;
+  font-size: 1.1em;
+  margin: .5em .15em .5em 12.5%;
 }
 input {
-  margin: .15em 3em .5em 3.5em;
   display: block;
+  margin: 0 auto;
   width: 75%;
   height: 2.8em;
+  padding-left: 1em;
 }
 input::-webkit-input-placeholder {
-  font-size: .8em;
+  font-size: 1.2em;
   color: #a17ced;
-  padding: .2em 0 1em 1em;
 }
 input:-moz-placeholder {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #a17ced;
-  padding: .2em 0 1em 1em;
 }
 input[type=submit],
 input[type=reset] {
   background: #9d1515;
+  margin: 1em auto 2em;
+  font-size: 1em;
   color: #fff;
   cursor: pointer;
   -webkit-border-radius: 10px;
@@ -219,12 +229,11 @@ footer {
   margin-bottom: 2em;
 }
 footer h6 {
-  line-height: 1.1em;
-  font-size: 1em;
+  font-size: 1.3em;
 }
-footer pre {
-  display: inline;
-  font-size: .7em;
+footer p {
+  display: block;
+  font-size: 1.2em;
   color: #111;
 }
 footer li {
@@ -232,7 +241,7 @@ footer li {
   display: inline-block;
 }
 footer li a {
-  font-size: .9em;
+  font-size: 1.4em;
   font-style: italic;
   margin-bottom: 1em;
   color: #9d1515;
@@ -272,6 +281,8 @@ table {
 }
 table h3 {
   color: #9d1515;
+  font-size: 1.8em;
+  line-height: 1.5em;
 }
 table tr {
   display: inline-block;
@@ -280,11 +291,23 @@ table tr {
   background-color: #f2dd7a;
   border: 5px solid #a17ced;
 }
+@media screen and (max-width: 540px) {
+  table tr {
+    width: 80%;
+  }
+}
+table tr:nth-child(even) {
+  float: none;
+  margin-right: 1.2em;
+}
 table tr td {
   width: 100%;
   display: block;
   padding: .2em 2em;
   text-align: left;
+}
+table tr td p {
+  font-size: 1.3em;
 }
 table tr td img {
   width: 100%;
@@ -297,6 +320,10 @@ table tr td a {
 table tr td input[type=button] {
   margin: .5em 0 1em;
   width: 100%;
+  border-radius: .5em;
+  font-size: 1.1em;
+  background-color: #814fe7;
+  color: #d9d9d9;
 }
 .detailsTable {
   width: 50%;
@@ -304,5 +331,30 @@ table tr td input[type=button] {
 .detailsTable tr {
   width: 90%;
   line-height: 1em;
+}
+.cartTable {
+  width: 60%;
+  /*  @media screen and (max-width: 800px) {
+       width: 40%;
+   }*/
+}
+.cartTable tr {
+  display: block;
+  width: 80%;
+  line-height: 1em;
+  margin: 0 auto;
+}
+@media screen and (max-width: 800px) {
+  .cartTable tr {
+    max-height: 20em;
+  }
+}
+.cartTable tr td {
+  display: inline-block;
+}
+.cartTable tr td img {
+  width: 10%;
+  height: auto;
+  margin-top: 1em;
 }
 /*# sourceMappingURL=newstyle.css.map */

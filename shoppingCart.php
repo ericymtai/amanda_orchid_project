@@ -7,7 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMANDA'S ORCHID CATALOG</title>
+    <title>AMANDA'S ORCHID SHOPPING CART</title>
     <link rel="stylesheet" href="css/newstyle.css" >
 </head>
 <body>
@@ -43,8 +43,8 @@ session_start();
         ?>
         
         <main>
-        <h2>Products' Details</h2>
-        <table class='detailsTable'>
+        <h2>Shopping Cart</h2>
+        <table class='cartTable'>
     
             
              <?php 
@@ -52,15 +52,9 @@ session_start();
                     echo "No products come back soon!!!";
                 } else {
                     while($row = mysql_fetch_array($result)) {
-                        echo '<tr><td><h3>'.$row['item'].
-                                '</td><td><p> Description: '.$row['description'].
-                                '</p></td><td><p> Our price $'.$row['price'].
-                                '</p></td><td><p>Size: '.$row['size'].
-                                'in. pot</p></td><td><p> Blooming: '.$row['blooming'].
-                                '</p></td><td><p> Watering: '.$row['watering'].
-                                '</p></td><td><p> Temperature: '.$row['temperature'].
-                                '</p></td><td><img src="images/'.$row['image'].' "/></td>'.
-                                '<td><a href="shoppingCart.php?id='.$row['product_id'].'"><input type="button" class="buy" value="BUY"></a></td></tr>';
+                        echo '<tr><td><img src="images/'.$row['image'].' "/></td><td><p>You just add 1 pieces of  '.$row['item'].
+                                ' to your shopping cart.</p></td><td><p>Total: $'.$row['price'].
+                                '</p></td></tr>';
                     }
                 }
                  mysql_close($link);
@@ -78,7 +72,6 @@ session_start();
         <p>References:</p>
         <p><a href="http://fontsov.com/font/edwardianscriptitc54019.html">Font: http://fontsov.com/font/edwardianscriptitc54019.html</a></p>         
         <p><a href="http://www.purple-planet.com">Music: http://www.purple-planet.com</a></p>
-    </footer>
     </footer>
    
     <script src="js/sound.js" type="text/javascript"></script> 
