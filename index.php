@@ -6,7 +6,7 @@ session_start();
 <html>
   <head>
     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMANDA'S ORCHID HOME</title>
     <link rel="stylesheet" href="css/newstyle.css" >
   </head>
@@ -69,7 +69,7 @@ session_start();
         <p><a href="http://fontsov.com/font/edwardianscriptitc54019.html">Font: http://fontsov.com/font/edwardianscriptitc54019.html</a></p>         
         <p><a href="http://www.purple-planet.com">Music: http://www.purple-planet.com</a></p>
     </footer>
-    </footer>
+
    
      <script src="js/sound.js" type="text/javascript"></script> 
   </body>

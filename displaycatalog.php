@@ -6,27 +6,28 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMANDA'S ORCHID CATALOG</title>
     <link rel="stylesheet" href="css/newstyle.css" >
 </head>
 <body>
-  
-     <div id="shop">
-        <div id="logo">
-          <img src="images/logo_outline2.svg" alt="logo"/>
-        </div>  <!-- end #logo -->
-        <div id="companyName">
-          <h1>Amanda's</h1>
-          <h1>Orchid</h1>
-          <h1>Shop</h1>
-        </div>  <!-- end #companyName -->
-      </div>  <!-- end #shop -->
+      
+    <header>
+        <div id="shop">
+           <div id="logo">
+             <img src="images/logo_outline2.svg" alt="logo"/>
+           </div>  <!-- end #logo -->
+           <div id="companyName">
+             <h1>Amanda's</h1>
+             <h1>Orchid</h1>
+             <h1>Shop</h1>
+           </div>  <!-- end #companyName -->
+         </div>  <!-- end #shop -->
     </header>
     
     <nav>
       <ul>
-        <li><a href="catalog.php" class="active">CATALOG</a></li>
+        <li><a href="displaycatalog.php" class="active">CATALOG</a></li>
         <li><a href="logout.php">LOG OUT</a></li>
       </ul>
     </nav>   
@@ -63,7 +64,7 @@ session_start();
         </main>
         <footer>
         <ul>
-          <li><a href="catalog.php" class="active2">CATALOG</a></li>
+          <li><a href="displaycatalog.php" class="active2">CATALOG</a></li>
           <li><a href="logout.php">LOG OUT</a></li>
         </ul> 
         <h6>This site is for educational purpose.</h6>
@@ -71,7 +72,6 @@ session_start();
         <p>References:</p>
         <p><a href="http://fontsov.com/font/edwardianscriptitc54019.html">Font: http://fontsov.com/font/edwardianscriptitc54019.html</a></p>         
         <p><a href="http://www.purple-planet.com">Music: http://www.purple-planet.com</a></p>
-    </footer>
     </footer>
    
     <script src="js/sound.js" type="text/javascript"></script> 
